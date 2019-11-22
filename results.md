@@ -1,9 +1,11 @@
+Query 1
 SELECT Projects.ProjectID, employees.LastName, Projects.StartDate
 FROM Projects
 INNER JOIN Employees ON Projects.EmployeeID=Employees.EmployeeID
 WHERE ProjectID<1010
 This query allows a company to see what employees worked on what project before a certain year. The projectID pertains to the years of completion.
 
+Query 2
 SELECT Sales, hiredate, LastName
 FROM Employees
 WHERE Sales >
