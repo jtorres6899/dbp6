@@ -7,7 +7,7 @@ This query pulls the projects and employee tables together to show us what emplo
 SELECT Sales, hiredate, LastName
 FROM Employees
 WHERE Sales >
- (SELECT AVG(15000)
+ (SELECT AVG(50)
  FROM employees)
 ORDER BY HireDate
 This query uses the select, where, and order by statments to show how much an employee sells in relation to their hiredate. The minimum amount of sales being 15000 we sae the longer a person was employed the move average sales they had which makes sense. More experience usually leads to better employee. 
