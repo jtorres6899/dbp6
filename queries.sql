@@ -11,3 +11,22 @@ WHERE Sales >
  FROM employees)
 ORDER BY HireDate
 This query uses the select, where, and order by statments to show how much an employee sells in relation to their hiredate. The minimum amount of sales being 15000 we sae the longer a person was employed the move average sales they had which makes sense. More experience usually leads to better employee. 
+
+
+SELECT Benefits.EmployeeID, Treasury.Salary, Benefits.VacationTime
+FROM Benefits
+INNER JOIN Treasury ON Benefits.Salary=Treasury.Salary
+WHERE VacationTime>1; 
+ 
+* I originally had WHERE Salary>25000;*
+
+This query pulls the benefits and Treasury tables together and shows us what an employees vacation time is based on salary, which is shown through the EmployeeID.
+
+SELECT Profit, CostToProduce, ProductID
+FROM Products 
+WHERE Profit >
+  (SELECT AVG(50000)
+  FROM Products)
+ORDER BY CostToProduce
+
+This query shows what profit is made in relation to the CostToProduce. This uses SELECT, WHERE, and ORDER BY statements. The set minimum ammount of profit being 50000, we can see the more significant profits Good Year made.
