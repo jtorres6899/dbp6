@@ -55,7 +55,7 @@ WHERE `Sales` >
 ORDER BY `DepartmentID`
 
 This Query shows a comparison of Sales and Profit as well as the salaries for the Departments that work with Customers 104 and above
-SELECT `Profit`, `Salary`, `Sales` 
+SELECT `DepartmentID`, `Profit`, `Salary`, `Sales` 
 FROM `treasury`
 INNER JOIN `customers`
 WHERE `CustomerID` > 104
