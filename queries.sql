@@ -30,3 +30,19 @@ WHERE Profit >
 ORDER BY CostToProduce
 
 This query shows what profit is made in relation to the CostToProduce. This uses SELECT, WHERE, and ORDER BY statements. The set minimum ammount of profit being 50000, we can see the more significant profits Good Year made.
+
+SELECT departments.DepartmentID, locations.Production, departments.Marketing
+FROM departments
+INNER JOIN locations ON locations.locationID=departments.DepartmentID
+WHERE DepartmentID<0010 
+
+This Query pulls from Departments and location to see what states how production and Marketing relate. 
+
+SELECT DepartmentID, Production, Finance 
+FROM Departments
+WHERE Finance >
+ ( SELECT AVG(1000)
+ FROM Departments)
+ORDER BY DepartmentID
+
+This Query shoes the average for Finacne is Departments. 
