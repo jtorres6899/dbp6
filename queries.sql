@@ -46,3 +46,10 @@ WHERE Finance >
 ORDER BY DepartmentID
 
 This Query shoes the average for Finacne is Departments. 
+
+This Query shows the more profitable Departments in the company
+SELECT `DepartmentID`, `Profit`, `Sales` FROM `treasury` 
+WHERE `Sales` >
+(SELECT AVG(6000)
+ FROM `treasury`)
+ORDER BY `DepartmentID`
