@@ -2,7 +2,8 @@ SELECT Projects.ProjectID, employees.LastName, Projects.StartDate
 FROM Projects
 INNER JOIN Employees ON Projects.EmployeeID=Employees.EmployeeID
 WHERE ProjectID<1010
-This query pulls the projects and employee tables together to show us what employees where done at what time period which is shown by the projectID.
+This query pulls the projects and employee tables together to show us what employees where done at what time
+period which is shown by the projectID.
 
 SELECT Sales, hiredate, LastName
 FROM Employees
